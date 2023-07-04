@@ -1,0 +1,46 @@
+#!/bin/sh
+
+# set root pointer
+xsetroot -cursor_name left_ptr
+
+# key bindings
+sxhkd -c "$HOME/.config/bspwm/sxhkdrc" &
+
+# panel
+polybar &
+
+# set some bsp specific
+# bspc monitor -d   󰨞 󰉋  󰯉 󰋫  󰗃
+# bspc monitor -d I II III IV V VI VII VIII IX
+bspc monitor -d 1 2 3 4 5 6 7 8 9
+
+bspc config window_gap 10
+bspc config border_width 2
+
+bspc config split_ratio 0.5
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+
+bspc config pointer_modifier mod4
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
+
+# desktop depending rules
+bspc rule -a kitty desktop=^1 follow=on focus=on
+bspc rule -a firefox desktop=^2 follow=on focus=on
+bspc rule -a Code desktop=^3 follow=on focus=on
+bspc rule -a Thunar desktop=^4 follow=on focus=on
+bspc rule -a Spotify desktop=^5 follow=off focus=off
+bspc rule -a steam desktop=^6 follow=on focus=on
+declare -a media=(Ristretto feh Nitrogen)
+for i in ${media[@]}; do
+  bspc rule -a $i desktop='^7' follow=on focus=on; done
+declare -a settings=(Pavucontrol Xfce4-power-manager-settings Blueberry.py Lxappearance)
+for i in ${settings[@]}; do
+  bspc rule -a $i desktop='^8' state=floating follow=on focus=on; done
+bspc rule -a vlc desktop=^9 follow=on focus=on
+
+# independent rules
+bspc rule -a firefox:Toolkit state=floating
+bspc rule -a Yad:yad-calendar state=floating
