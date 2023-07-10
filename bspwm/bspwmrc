@@ -43,4 +43,5 @@ bspc rule -a vlc desktop=^9 follow=on focus=on
 
 # independent rules
 bspc rule -a firefox:Toolkit state=floating
-bspc rule -a Yad:yad-calendar state=floating
+bspc rule -a Galculator state=floating
+bspc rule -a gnome-calendar state=floating
