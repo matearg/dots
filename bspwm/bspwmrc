@@ -10,9 +10,9 @@ sxhkd -c "$HOME/.config/bspwm/sxhkdrc" &
 polybar &
 
 # set some bsp specific
-# bspc monitor -d   󰨞 󰉋  󰯉 󰋫  󰗃
+bspc monitor -d   󰨞 󰉋  󰯉 󰋫  󰗃
 # bspc monitor -d I II III IV V VI VII VIII IX
-bspc monitor -d 1 2 3 4 5 6 7 8 9
+# bspc monitor -d 1 2 3 4 5 6 7 8 9
 
 bspc config window_gap 10
 bspc config border_width 2
@@ -30,13 +30,13 @@ bspc config pointer_action3 resize_corner
 bspc rule -a kitty desktop=^1 follow=on focus=on
 bspc rule -a firefox desktop=^2 follow=on focus=on
 bspc rule -a Code desktop=^3 follow=on focus=on
-bspc rule -a Thunar desktop=^4 follow=on focus=on
+bspc rule -a Pcmanfm desktop=^4 follow=on focus=on
 bspc rule -a Spotify desktop=^5 follow=off focus=off
 bspc rule -a steam desktop=^6 follow=on focus=on
 declare -a media=(Ristretto feh Nitrogen)
 for i in ${media[@]}; do
   bspc rule -a $i desktop='^7' follow=on focus=on; done
-declare -a settings=(Pavucontrol Xfce4-power-manager-settings Blueberry.py Lxappearance)
+declare -a settings=(Pavucontrol Xfce4-power-manager-settings Blueberry.py Lxappearance Cpupower-gui)
 for i in ${settings[@]}; do
   bspc rule -a $i desktop='^8' state=floating follow=on focus=on; done
 bspc rule -a vlc desktop=^9 follow=on focus=on
@@ -45,3 +45,4 @@ bspc rule -a vlc desktop=^9 follow=on focus=on
 bspc rule -a firefox:Toolkit state=floating
 bspc rule -a Galculator state=floating
 bspc rule -a gnome-calendar state=floating
+bspc rule -a googlecalendardark-nativefier-e22938 state=floating
