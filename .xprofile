@@ -9,16 +9,16 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/.local/bin:$PATH"
 
 # start the compositor (transparency, fade, shadows, blur, etc.)
-picom -b &
+picom -b
 
 # start the bluetooth tray application
-blueberry-tray &
+# blueberry-tray &
 
 # start the network tray application
 nm-applet &
 
 # start the volume tray application
-volumeicon &
+# volumeicon &
 
 # start the battery tray application
 xfce4-power-manager &
