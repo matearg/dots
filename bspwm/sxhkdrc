@@ -8,11 +8,14 @@ super + Return
 
 # file manager
 super + shift + f
-    thunar
+    pcmanfm
 
 # program launcher
 super + {_,shift + }p
     ~/.config/rofi/launchers/type-4/launcher.sh
+
+super + {_,shift + }d
+    dmenu_run -i -nb '#1e1e2e' -nf '#f5c2e7' -sb '#f5c2e7' -sf '#1e1e2e' -fn 'JetBrainsMono Nerd Font Propo:pixelsize=20'
 
 # make sxhkd reload its configuration files:
 super + ESC
@@ -93,7 +96,7 @@ XF86AudioRaiseVolume
     pamixer -i 2
 XF86AudioLowerVolume
     pamixer -d 2
-XF86MonBrightnessUp
-    xbacklight +10
-XF86MonBrightnessDown
-    xbacklight -10
+# XF86MonBrightnessUp
+#     xbacklight +10
+# XF86MonBrightnessDown
+#     xbacklight -10
