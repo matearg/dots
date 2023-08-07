@@ -27,7 +27,7 @@ control + shift + r
 
 # quit bspwm normally
 super + x
-    ~/.config/rofi/powermenu/type-2/powermenu.sh
+    ~/.config/rofi/powermenu/type-5/powermenu.sh
 
 # close and kill
 super + {_,shift + }c
@@ -39,7 +39,7 @@ super + {_,shift + }c
 
 # set the window state
 super + @space
-    bspc node -t {tiled,floating}
+    bspc node -t {floating,tiled}
 
 # alternate between the tiled and monocle layout
 super +  m
@@ -93,9 +93,9 @@ super + {Left,Down,Up,Right}
 XF86AudioMute
     pamixer -t
 XF86AudioRaiseVolume
-    pamixer -i 2
+    pamixer -i 5
 XF86AudioLowerVolume
-    pamixer -d 2
+    pamixer -d 5
 # XF86MonBrightnessUp
 #     xbacklight +10
 # XF86MonBrightnessDown
