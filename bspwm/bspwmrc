@@ -29,7 +29,9 @@ bspc config pointer_action3 resize_corner
 # desktop depending rules
 bspc rule -a kitty desktop=^1 follow=on focus=on
 bspc rule -a firefox desktop=^2 follow=on focus=on
-bspc rule -a Code desktop=^3 follow=on focus=on
+declare -a dev=(Code Gnome-boxes)
+for i in ${dev[@]}; do
+  bspc rule -a $i desktop='^3' follow=on focus=on; done
 bspc rule -a Pcmanfm desktop=^4 follow=on focus=on
 bspc rule -a Spotify desktop=^5 follow=off focus=off
 bspc rule -a steam desktop=^6 follow=on focus=on
