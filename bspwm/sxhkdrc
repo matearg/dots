@@ -15,7 +15,7 @@ super + {_,shift + }p
     ~/.config/rofi/launchers/type-4/launcher.sh
 
 super + {_,shift + }d
-    dmenu_run -i -nb '#1e1e2e' -nf '#f5c2e7' -sb '#f5c2e7' -sf '#1e1e2e' -fn 'JetBrainsMono Nerd Font Propo:pixelsize=20'
+    dmenu_run -i -nb '#1e1e2e' -nf '#f5c2e7' -sb '#f5c2e7' -sf '#1e1e2e' -fn 'JetBrainsMono Nerd Font Propo:pixelsize=22'
 
 # make sxhkd reload its configuration files:
 super + ESC
@@ -27,7 +27,7 @@ control + shift + r
 
 # quit bspwm normally
 super + x
-    ~/.config/rofi/powermenu/type-5/powermenu.sh
+    ~/.config/rofi/powermenu/type-1/powermenu.sh
 
 # close and kill
 super + {_,shift + }c
