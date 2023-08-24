@@ -10,8 +10,8 @@ sxhkd -c "$HOME/.config/bspwm/sxhkdrc" &
 polybar &
 
 # set some bsp specific
-bspc monitor -d   󰨞 󰉋  󰯉 󰋫  󰗃
-# bspc monitor -d I II III IV V VI VII VIII IX
+# bspc monitor -d   󰨞 󰉋  󰯉 󰋫  󰗃
+bspc monitor -d I II III IV V VI VII VIII IX
 # bspc monitor -d 1 2 3 4 5 6 7 8 9
 
 bspc config window_gap 10
@@ -38,7 +38,7 @@ bspc rule -a steam desktop=^6 follow=on focus=on
 declare -a media=(Ristretto feh Nitrogen)
 for i in ${media[@]}; do
   bspc rule -a $i desktop='^7' follow=on focus=on; done
-declare -a settings=(Pavucontrol Xfce4-power-manager-settings Blueberry.py Lxappearance Cpupower-gui)
+declare -a settings=(Pavucontrol Xfce4-power-manager-settings Blueberry.py Lxappearance)
 for i in ${settings[@]}; do
   bspc rule -a $i desktop='^8' state=floating follow=on focus=on; done
 bspc rule -a vlc desktop=^9 follow=on focus=on
@@ -46,4 +46,3 @@ bspc rule -a vlc desktop=^9 follow=on focus=on
 # independent rules
 bspc rule -a firefox:Toolkit state=floating
 bspc rule -a Galculator state=floating
-bspc rule -a googlecalendardark-nativefier-e22938 state=floating
