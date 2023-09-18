@@ -10,9 +10,9 @@ sxhkd -c "$HOME/.config/bspwm/sxhkdrc" &
 polybar &
 
 # set some bsp specific
-# bspc monitor -d   󰨞 󰉋  󰯉 󰋫  󰙯
+bspc monitor -d   󰨞 󰉋  󰯉 󰋫  󰙯
 # bspc monitor -d I II III IV V VI VII VIII IX
-bspc monitor -d 1 2 3 4 5 6 7 8 9
+# bspc monitor -d 1 2 3 4 5 6 7 8 9
 
 bspc config window_gap 10
 bspc config border_width 2
@@ -29,7 +29,7 @@ bspc config pointer_action3 resize_corner
 # desktop depending rules
 bspc rule -a kitty desktop=^1 follow=on focus=on
 bspc rule -a firefox desktop=^2 follow=on focus=on
-declare -a dev=(Code Gnome-boxes)
+declare -a dev=(Code codeblocks.exe conhost.exe)
 for i in ${dev[@]}; do
   bspc rule -a $i desktop='^3' follow=on focus=on; done
 bspc rule -a Pcmanfm desktop=^4 follow=on focus=on
@@ -38,7 +38,7 @@ bspc rule -a steam desktop=^6 follow=on focus=on
 declare -a media=(Ristretto feh Nitrogen vlc)
 for i in ${media[@]}; do
   bspc rule -a $i desktop='^7' follow=on focus=on; done
-declare -a settings=(Pavucontrol Xfce4-power-manager-settings Blueberry.py Lxappearance)
+declare -a settings=(Pavucontrol Xfce4-power-manager-settings Blueberry.py Lxappearance Lightdm-gtk-greeter-settings)
 for i in ${settings[@]}; do
   bspc rule -a $i desktop='^8' state=floating follow=on focus=on; done
 bspc rule -a discord desktop=^9 follow=on focus=on
@@ -46,3 +46,5 @@ bspc rule -a discord desktop=^9 follow=on focus=on
 # independent rules
 bspc rule -a firefox:Toolkit state=floating
 bspc rule -a Galculator state=floating
+bspc rule -a conhost.exe state=floating
+bspc rule -a Leafpad state=floating

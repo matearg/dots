@@ -93,7 +93,5 @@ XF86AudioRaiseVolume
     pamixer -i 5
 XF86AudioLowerVolume
     pamixer -d 5
-# XF86MonBrightnessUp
-#     xbacklight +10
-# XF86MonBrightnessDown
-#     xbacklight -10
+Print
+    flameshot gui
