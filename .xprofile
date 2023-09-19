@@ -27,7 +27,8 @@ xfce4-power-manager &
 dunst -config "$HOME/.config/dunst/dustrc" &
 
 # restore the last wallpaper applied with nitrogen
-nitrogen --restore &
+# nitrogen --restore &
+wal -Rq
 
 # start gnome policy kit agent (password authentication)
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
