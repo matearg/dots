@@ -17,6 +17,7 @@ compinit
 
 export EDITOR=nvim
 export PATH=$HOME/.config/rofi/scripts:$PATH
+[[ $- != *i* ]] && return
 
 alias vim="$EDITOR"
 alias pacman="sudo pacman"
