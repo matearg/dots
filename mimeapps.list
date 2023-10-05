@@ -1,0 +1,13 @@
+[Default Applications]
+image/jpeg=org.xfce.ristretto.desktop
+application/x-shellscript=code.desktop
+inode/directory=pcmanfm.desktop
+text/plain=leafpad.desktop
+image/png=org.xfce.ristretto.desktop
+
+[Added Associations]
+image/jpeg=org.xfce.ristretto.desktop;
+application/x-shellscript=code.desktop;
+text/plain=leafpad.desktop;
+image/png=org.xfce.ristretto.desktop;
+application/pdf=org.pwmt.zathura.desktop;

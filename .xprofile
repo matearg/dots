@@ -15,7 +15,7 @@ picom -b
 # blueberry-tray &
 
 # start the network tray application
-nm-applet &
+# nm-applet &
 
 # start the volume tray application
 # volumeicon &
@@ -28,7 +28,8 @@ dunst -config "$HOME/.config/dunst/dustrc" &
 
 # restore the last wallpaper applied with nitrogen
 # nitrogen --restore &
-wal -Rq
+# wal -Rq
+wal -qi /home/mateo/Imágenes/wallpapers/
 
 # start gnome policy kit agent (password authentication)
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
