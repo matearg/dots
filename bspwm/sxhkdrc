@@ -1,6 +1,6 @@
 # web browser
 super + {_,shift + }w
-    firefox
+    brave
 
 # terminal emulator
 super + Return
