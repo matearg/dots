@@ -44,7 +44,7 @@ super +  m
 
 # alternate between the tiled and fullscreen layout
 super + f
-    bspc node -t {tiled,fullscreen}
+    bspc node -t {fullscreen,tiled}
 
 #
 # focus/swap
