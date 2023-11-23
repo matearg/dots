@@ -88,10 +88,18 @@ super + {Left,Down,Up,Right}
 
 # volume control keys
 XF86AudioMute
-    pamixer -t
+    changevolume mute
 XF86AudioRaiseVolume
-    pamixer -i 5
+    changevolume up
 XF86AudioLowerVolume
-    pamixer -d 5
+    changevolume down
+
+# brightness control keys
+XF86MonBrightnessUp
+    changebrightness up
+XF86MonBrightnessDown
+    changebrightness down
+
+# screenshot control keys
 Print
     flameshot gui
