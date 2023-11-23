@@ -11,25 +11,12 @@ export PATH="$HOME/.local/bin:$PATH"
 # start the compositor (transparency, fade, shadows, blur, etc.)
 picom -b
 
-# start the bluetooth tray application
-# blueberry-tray &
-
-# start the network tray application
-# nm-applet &
-
-# start the volume tray application
-# volumeicon &
-
-# start the battery tray application
-xfce4-power-manager &
-
 # start the notifycation daemon
 dunst -config "$HOME/.config/dunst/dustrc" &
 
 # restore the last wallpaper applied with nitrogen
-# nitrogen --restore &
-# wal -Rq
-wal -qi /home/mateo/Imágenes/wallpapers/
+wal -Rq
+# wal -qi /home/mateo/Imágenes/wallpapers/
 
 # start gnome policy kit agent (password authentication)
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
@@ -39,6 +26,3 @@ xset dpms 600 900 1200
 
 # set keyboard repeat rate
 xset r rate 200 40
-
-# left hand mouse
-#xmodmap -e "pointer = 3 2 1"
